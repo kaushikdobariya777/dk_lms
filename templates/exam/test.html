@@ -1,0 +1,47 @@
+</<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test - Title</title>
+    <link rel="stylesheet" href="{%static 'css/teststyle.css'  %}">
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Hello Guest</h1>
+    </div>
+    {% if level %}
+      {{level}}
+    {% else %}
+      level is not defined
+    {% endif %}
+    <div class="questationblock">
+      <div class="que">
+        <h2>{{que}}</h2>
+      </div>
+
+      <div class="options">
+        <input type="radio" name="answer" value="Kaushik"> <span>{{a}}</span>
+      </div>
+
+      <div class="options">
+        <input type="radio" name="answer" value="Nirupa"> <span>{{b}}</span>
+      </div>
+
+      <div class="options">
+        <input type="radio" name="answer" value="Aradhya"> <span>{{c}}</span>
+      </div>
+
+      <div class="options">
+        <input type="radio" name="answer" value="Luv"> <span>{{d}}</span>
+      </div>
+
+      <div class="submit">
+        <input type="submit" name="Submit" value="Submit Now">
+      </div>
+
+    </div>
+    {% lorem %}
+
+  </body>
+</html>
