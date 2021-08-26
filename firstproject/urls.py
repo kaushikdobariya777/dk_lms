@@ -19,6 +19,8 @@ from django.urls import path
 #from exam import views as exam_views
 from django.urls import include
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url('testapp/',include('testapp.urls')),
@@ -30,4 +32,4 @@ urlpatterns = [
     #path('test/',exam_views.showTest),
     #path('result/',exam_views.showResult),
     path('admin/', admin.site.urls),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
